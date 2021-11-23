@@ -1,12 +1,12 @@
 #!/bin/python3
 
 '''
-HBTWN v. 0.01
+HBTWN v. 0.02
 Project with application which allow to calculate telescope size which is needed to achieve expected angular resolution.
 HBTWN  Copyright (C) 2021  Jan Bielański
 '''
 print("------------------------------------------------------------------------------------------------------------")
-print("                                             HBTWN v. 0.01                                                  ")
+print("                                             HBTWN v. 0.02                                                  ")
 print("Application allow to calculate telescope size which is needed to achieve expected angular resolution.       ")
 print("                              HBTWN  Copyright (C) 2021  Jan Bielański                                      ")
 print("------------------------------------------------------------------------------------------------------------")
