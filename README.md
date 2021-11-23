@@ -10,6 +10,11 @@ Application usage:
 python HBTWN.py
 
 Changes:
+
+--- 0.02 ---
+- fixed formulas
+- added object shape selection for spherical and flat objects
+
 --- 0.01 ---
 - initial version of application
 - initial calculation core
