@@ -215,8 +215,8 @@ print("")
 # Article test: Slava G. Turyshev, "DIRECT MULTIPIXEL IMAGING AND SPECTROSCOPY OF AN EXOPLANET WITH A SOLAR GRAVITY LENS MISSION"
 obj_name = "Earth"
 obj_size = [ 2*6371.0, 'km' ]
-obj_dist = [ 100.0, 'ly' ]
-obj_dist_au = dist_units_converter(obj_dist[0], obj_dist[1], 'au')
+obj_dist = [ 30, 'pc' ]
+obj_dist_au = dist_units_converter(obj_dist[0], obj_dist[1], 'ly')
 obj_shape = ObjectShape.SPHERICAL
 number_of_pixels = 1
 wavelength = [1.0, 'um']
