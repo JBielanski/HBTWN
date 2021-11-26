@@ -161,6 +161,7 @@ telescope_size_unit = 'mm'
 print(str(obj_name) + " diameter: " + str(obj_size[0]) + " " + str(obj_size[1]))
 print(str(obj_name) + " distance: " + str(obj_dist[0]) + " " + str(obj_dist[1]) + " / " + str(obj_dist_au[0]) + " " + str(obj_dist_au[1]))
 print("Expected size on image: " + str(number_of_pixels) + " pixels")
+print("Light wavelength: " + str(wavelength[0]) + str(wavelength[1]))
 telescope_size, object_size = calculate_telescope_size(obj_size, obj_dist, obj_dist, number_of_pixels, wavelength, telescope_size_unit)
 print("Mirror/lens size in telescope: " + str(telescope_size[0]) + " " + str(telescope_size[1]) + ", object size on sky: " + str(object_size[0]) + " " + str(object_size[1]))
 
@@ -181,6 +182,7 @@ telescope_size_unit = 'mm'
 print(str(obj_name) + " diameter: " + str(obj_size[0]) + " " + str(obj_size[1]))
 print(str(obj_name) + " distance: " + str(obj_dist[0]) + " " + str(obj_dist[1]) + " / " + str(obj_dist_au[0]) + " " + str(obj_dist_au[1]))
 print("Expected size on image: " + str(number_of_pixels) + " pixels")
+print("Light wavelength: " + str(wavelength[0]) + str(wavelength[1]))
 telescope_size, object_size = calculate_telescope_size(obj_size, obj_dist, obj_dist, number_of_pixels, wavelength, telescope_size_unit)
 print("Mirror/lens size in telescope: " + str(telescope_size[0]) + " " + str(telescope_size[1]) + ", object size on sky: " + str(object_size[0]) + " " + str(object_size[1]))
 
@@ -201,6 +203,29 @@ telescope_size_unit = 'km'
 print(str(obj_name) + " diameter: " + str(obj_size[0]) + " " + str(obj_size[1]))
 print(str(obj_name) + " distance: " + str(obj_dist[0]) + " " + str(obj_dist[1]) + " / " + str(obj_dist_au[0]) + " " + str(obj_dist_au[1]))
 print("Expected size on image: " + str(number_of_pixels) + " pixels")
+print("Light wavelength: " + str(wavelength[0]) + str(wavelength[1]))
+telescope_size, object_size = calculate_telescope_size(obj_size, obj_dist, obj_dist, number_of_pixels, wavelength, telescope_size_unit)
+print("Mirror/lens size in telescope: " + str(telescope_size[0]) + " " + str(telescope_size[1]) + ", object size on sky: " + str(object_size[0]) + " " + str(object_size[1]))
+
+print("")
+print("-----------------------------------------------------------------------------")
+print("")
+
+# EARTH from 100 ly
+# Article test: Slava G. Turyshev, "DIRECT MULTIPIXEL IMAGING AND SPECTROSCOPY OF AN EXOPLANET WITH A SOLAR GRAVITY LENS MISSION"
+obj_name = "Earth"
+obj_size = [ 2*6371.0, 'km' ]
+obj_dist = [ 100.0, 'ly' ]
+obj_dist_au = dist_units_converter(obj_dist[0], obj_dist[1], 'au')
+obj_shape = ObjectShape.SPHERICAL
+number_of_pixels = 1
+wavelength = [1.0, 'um']
+telescope_size_unit = 'km'
+
+print(str(obj_name) + " diameter: " + str(obj_size[0]) + " " + str(obj_size[1]))
+print(str(obj_name) + " distance: " + str(obj_dist[0]) + " " + str(obj_dist[1]) + " / " + str(obj_dist_au[0]) + " " + str(obj_dist_au[1]))
+print("Expected size on image: " + str(number_of_pixels) + " pixels")
+print("Light wavelength: " + str(wavelength[0]) + str(wavelength[1]))
 telescope_size, object_size = calculate_telescope_size(obj_size, obj_dist, obj_dist, number_of_pixels, wavelength, telescope_size_unit)
 print("Mirror/lens size in telescope: " + str(telescope_size[0]) + " " + str(telescope_size[1]) + ", object size on sky: " + str(object_size[0]) + " " + str(object_size[1]))
 
@@ -221,6 +246,7 @@ telescope_size_unit = 'km'
 print(str(obj_name) + " diameter: " + str(obj_size[0]) + " " + str(obj_size[1]))
 print(str(obj_name) + " distance: " + str(obj_dist[0]) + " " + str(obj_dist[1]) + " / " + str(obj_dist_au[0]) + " " + str(obj_dist_au[1]))
 print("Expected size on image: " + str(number_of_pixels) + " pixels")
+print("Light wavelength: " + str(wavelength[0]) + str(wavelength[1]))
 telescope_size, object_size = calculate_telescope_size(obj_size, obj_dist, obj_dist, number_of_pixels, wavelength, telescope_size_unit)
 print("Mirror/lens size in telescope: " + str(telescope_size[0]) + " " + str(telescope_size[1]) + ", object size on sky: " + str(object_size[0]) + " " + str(object_size[1]))
 
@@ -241,6 +267,7 @@ telescope_size_unit = 'km'
 print(str(obj_name) + " diameter: " + str(obj_size[0]) + " " + str(obj_size[1]))
 print(str(obj_name) + " distance: " + str(obj_dist[0]) + " " + str(obj_dist[1]) + " / " + str(obj_dist_au[0]) + " " + str(obj_dist_au[1]))
 print("Expected size on image: " + str(number_of_pixels) + " pixels")
+print("Light wavelength: " + str(wavelength[0]) + str(wavelength[1])) 
 telescope_size, object_size = calculate_telescope_size(obj_size, obj_dist, obj_shape, number_of_pixels, wavelength, telescope_size_unit)
 print("Mirror/lens size in telescope: " + str(telescope_size[0]) + " " + str(telescope_size[1]) + ", object size on sky: " + str(object_size[0]) + " " + str(object_size[1]))
 
