@@ -430,6 +430,7 @@
     </layout>
    </widget>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -446,24 +447,61 @@
      <bold>false</bold>
     </font>
    </property>
-   <widget class="QMenu" name="menuWibierz_j_zyk">
-    <property name="title">
-     <string>Wybierz język:</string>
+   <widget class="QMenu" name="menu_sel_language">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
-    <addaction name="actionPolski"/>
-    <addaction name="actionEnglish"/>
+    <property name="title">
+     <string>Wybierz język</string>
+    </property>
+    <addaction name="action_polish"/>
+    <addaction name="action_english"/>
    </widget>
-   <addaction name="menuWibierz_j_zyk"/>
+   <widget class="QMenu" name="menu_about">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>O programie</string>
+    </property>
+    <addaction name="action_license"/>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu_sel_language"/>
+   <addaction name="menu_about"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionPolski">
+  <action name="action_polish">
    <property name="text">
     <string>Polski</string>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
   </action>
-  <action name="actionEnglish">
+  <action name="action_english">
    <property name="text">
     <string>English</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_license">
+   <property name="text">
+    <string>Licencja</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>O programie</string>
    </property>
   </action>
  </widget>
