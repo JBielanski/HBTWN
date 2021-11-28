@@ -1,4 +1,4 @@
-# HBTWN v. 0.02
+# HBTWN v. 0.03
 Project with application which allow to calculate telescope size which is needed to achieve expected angular resolution.
 HBTWN  Copyright (C) 2021  Jan Bielański
 
@@ -10,6 +10,9 @@ Application usage:
 python HBTWN.py
 
 Changes:
+
+--- 0.03 ---
+- GUI initial files in project (not connected to application yet)
 
 --- 0.02 ---
 - fixed formulas
@@ -25,4 +28,6 @@ TODO:
 - application GUI
 - telescope visualization
 - stand alone application for Linux/Windows/MacOS
-
+- [optional] SNR (signal to noise ratio)
+- [optional] calculate exposition time which is needed to get useful SNR ratio
+- [optional] simulation of star gravity lenses

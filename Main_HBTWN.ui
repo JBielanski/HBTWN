@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>631</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="11" column="7">
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>arcmin</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>arcsec</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>uas</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="6" column="1" colspan="6">
+      <widget class="QPushButton" name="pushButton">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OBLICZ</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="3">
+      <widget class="QLabel" name="label_in_4">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Oczekiwana rozdzieczość (rozmiar zdjęcia):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="7">
+      <widget class="QLCDNumber" name="lcdNumber_res_1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="8">
+      <widget class="Line" name="line_0">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_in_0">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Nazwa obiektu:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="7">
+      <widget class="QComboBox" name="comboBox_res_1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>m</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>km</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>inch</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="11" column="0" colspan="7">
+      <widget class="QLCDNumber" name="lcdNumber"/>
+     </item>
+     <item row="7" column="0" colspan="8">
+      <widget class="Line" name="line_1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="8">
+      <widget class="QLabel" name="label_out_0">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>WYMAGANAY ROZMIAR LUSTRA / SOCZEKI TELESKOPU </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0" colspan="8">
+      <widget class="QLabel" name="label_out_1">
+       <property name="text">
+        <string>ROZMIAR KĄTOWY OBIEKTU NA NIEBIE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" colspan="6">
+      <widget class="QLineEdit" name="lineEdit_in_0">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7">
+      <widget class="QComboBox" name="comboBox_in_1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>km</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>au</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ly</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pc</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="5">
+      <widget class="QLineEdit" name="lineEdit_in_1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="7">
+      <widget class="QComboBox" name="comboBox_in_2b">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>płaski</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>sferyczny</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QComboBox" name="comboBox_in_2a">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>m</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>km</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>inch</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>au</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ly</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pc</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="2" colspan="4">
+      <widget class="QLineEdit" name="lineEdit_in_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="7">
+      <widget class="QComboBox" name="comboBox_in_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>nm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>um</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>m</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="2" colspan="5">
+      <widget class="QLineEdit" name="lineEdit_in_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3" colspan="5">
+      <widget class="QLineEdit" name="lineEdit_in_4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="label_in_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Długość fali:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLabel" name="label_in_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Rozmiar i typ:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="label_in_1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Odległość:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <widget class="QMenu" name="menuWibierz_j_zyk">
+    <property name="title">
+     <string>Wybierz język:</string>
+    </property>
+    <addaction name="actionPolski"/>
+    <addaction name="actionEnglish"/>
+   </widget>
+   <addaction name="menuWibierz_j_zyk"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPolski">
+   <property name="text">
+    <string>Polski</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
