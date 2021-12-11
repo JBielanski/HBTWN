@@ -37,3 +37,4 @@ TODO:
 - [optional] SNR (signal to noise ratio)
 - [optional] calculate exposition time which is needed to get useful SNR ratio
 - [optional] simulation of star gravity lenses
+- [optional] simulate image in telescope
