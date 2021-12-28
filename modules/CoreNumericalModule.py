@@ -85,7 +85,7 @@ def calculate_telescope_resolution(_telescope_parameters, _wavelength = [522.0, 
 
         print(theta)
 
-        telescope_resolution = angle_units_converter(theta, 'rad', 'arcsec')
+        telescope_resolution = HBTWN_UCM.angle_units_converter(theta, 'rad', 'arcsec')
         return telescope_resolution
 
     except TypeError as e:
