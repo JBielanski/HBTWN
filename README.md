@@ -30,11 +30,27 @@ Changes:
 - initial test inside the code
 
 TODO:
+--> Mathematical models:
 - better calculations model, consider of camera behaviour, image reconstruction such as Event Horizon Telescope – EHT
-- application GUI
-- telescope visualization
-- stand alone application for Linux/Windows/MacOS
-- [optional] SNR (signal to noise ratio)
+- [optional] calculate SNR (signal to noise ratio)
 - [optional] calculate exposition time which is needed to get useful SNR ratio
+
+--> GUI
+- application graphics GUI (QT)
+- application tex UI (simple text interface)
+
+--> Visualizations
+- telescope visualization
+- angular resolution plot for selected wavelengths range with selected telescope size (GNUPLOT - for text mode, MATPLOTLIB)
 - [optional] simulation of star gravity lenses
 - [optional] simulate image in telescope
+
+--> Database
+- database for specific wavelengths
+- datebase for celestial objects
+- database for predefined telescopes
+
+--> Operation system support
+- stand alone application for Linux/Windows/MacOS
+- phone application (Android)
+
