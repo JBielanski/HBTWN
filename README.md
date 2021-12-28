@@ -29,7 +29,8 @@ Changes:
 - initial calculation core
 - initial test inside the code
 
-TODO:
+APPLICATION DEVELOPMENT PLAN, TODO:
+
 --> Mathematical models:
 - better calculations model, consider of camera behaviour, image reconstruction such as Event Horizon Telescope – EHT
 - [optional] calculate SNR (signal to noise ratio)
