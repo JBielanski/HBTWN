@@ -64,6 +64,52 @@ def calculate_telescope_size(_target_obj_physical_size, _target_obj_physical_dis
         print('Calculation failure!!!')
         return None, None
 
+
+'''
+calculate_object_size - calculate size of object which could be seen with given telescope and distance
+_target_obj_physical_dist - target object physical distance as array: [ distance, unit ]
+_target_obj_size_unit - expected unit for object size: unit
+_telescope_angular_resolution - telescope angular resolution: [ angular resolution, unit ]
+_object_shape - object shape (default: ObjectShape.SPHERICAL)
+_number_of_pixels - number of pixels on image (default: 1)
+@return calculated object size in given unit
+'''
+def calculate_object_size(_target_obj_physical_dist, _target_obj_size_unit, _telescope_angular_resolution, _object_shape = HBTWN_UCM.ObjectShape.SPHERICAL, _number_of_pixels = 1):
+
+    try:
+        dist_m = HBTWN_UCM.dist_units_converter(_target_obj_physical_dist[0], _target_obj_physical_dist[1], 'm')
+        angular_size_in_rads = HBTWN_UCM.angle_units_converter(_telescope_angular_resolution[0], _telescope_angular_resolution[1], 'rad')[0]
+
+        '''
+        Observed object diameter in m for flat and spherical objects
+        delta [rad] = 2*arctan(diameter [m] / (2*distance [m]))
+            z = diameter [m] / (2*distance [m])
+        delta [rad] = 2*arctan(z)
+        z = tan(delta [rad] / 2)
+        diameter [m] = z * (2*distance [m])
+        diameter [m] = tan(delta [rad] / 2) * (2*distance [m])
+
+        delta [rad] = 2*arcsin(diameter [m] / (2*distance [m]))
+            z = sin(delta [rad] / 2)
+        diameter [m] = sin(delta [rad] / 2) * (2*distance [m])
+        '''
+
+        object_size_in_m = 0.0
+        if _object_shape is HBTWN_UCM.ObjectShape.FLAT:
+            object_size_in_m = np.tan(angular_size_in_rads*0.5)*(2.0*dist_m[0])
+        else:
+            _object_shape = HBTWN_UCM.ObjectShape.SPHERICAL
+            object_size_in_m = np.sin(angular_size_in_rads*0.5)*(2.0*dist_m[0])
+
+        # Scale object
+        object_size_in_m = object_size_in_m * _number_of_pixels
+
+        return HBTWN_UCM.dist_units_converter(object_size_in_m,'m',_target_obj_size_unit)
+
+    except TypeError as e:
+        print('Calculation failure!!!')
+        return None
+
 '''
 calculate_telescope_resolution - calculate telescope angular resolution
 _telescope_parameters - telescope size as array: [size, unit]
@@ -82,8 +128,6 @@ def calculate_telescope_resolution(_telescope_parameters, _wavelength = [522.0, 
         theta [rad] = 1.22 * ( lambda [m] / D [m] ), where lambda - wavelength, D - telescope diameter
         '''
         theta = 1.22*(wavelength_m[0]/size_m[0])
-
-        print(theta)
 
         telescope_resolution = HBTWN_UCM.angle_units_converter(theta, 'rad', 'arcsec')
         return telescope_resolution

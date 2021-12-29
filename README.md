@@ -1,4 +1,4 @@
-# HBTWN v. 0.04
+# HBTWN v. 0.05
 Project with application which allow to calculate telescope size which is needed to achieve expected angular resolution.
 HBTWN  Copyright (C) 2021  Jan Bielański
 
@@ -10,6 +10,9 @@ Application usage:
 python HBTWN.py
 
 Changes:
+
+--- 0.05 ---
+- added algorithm which allow to calculate object size visible by telescope
 
 --- 0.04 ---
 - prepare for GUI version

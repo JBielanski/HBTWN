@@ -1,12 +1,12 @@
 #!/bin/python3
 
 '''
-HBTWN v. 0.04
+HBTWN v. 0.05
 Project with application which allow to calculate telescope size which is needed to achieve expected angular resolution.
 HBTWN  Copyright (C) 2021  Jan Bielański
 '''
 print("------------------------------------------------------------------------------------------------------------")
-print("                                             HBTWN v. 0.04                                                  ")
+print("                                             HBTWN v. 0.05                                                  ")
 print("Application allow to calculate telescope size which is needed to achieve expected angular resolution.       ")
 print("                              HBTWN  Copyright (C) 2021  Jan Bielański                                      ")
 print("------------------------------------------------------------------------------------------------------------")
@@ -150,11 +150,11 @@ print("")
 
 # Moon lander
 obj_name = "Moon lander Apollo"
-obj_size = [ 300, 'm' ]
+obj_size = [ 9.4, 'm' ]
 obj_dist = [ 364397, 'km' ]
 obj_dist_au = HBTWN_UCM.dist_units_converter(obj_dist[0], obj_dist[1], 'au')
 obj_shape = HBTWN_UCM.ObjectShape.SPHERICAL
-number_of_pixels = 1
+number_of_pixels = 10
 wavelength = [522.0, 'nm']
 telescope_size_unit = 'm'
 
@@ -169,14 +169,14 @@ print("")
 print("-----------------------------------------------------------------------------")
 print("")
 
-
-print("Telescope resolution 5\" (127mm): " + str(HBTWN_CNM.calculate_telescope_resolution([5,'inch'])))
-print("Telescope resolution 8\" (203.2mm): " + str(HBTWN_CNM.calculate_telescope_resolution([8,'inch'])))
-print("Telescope resolution 10\" (254mm): " + str(HBTWN_CNM.calculate_telescope_resolution([10,'inch'])))
-print("Telescope resolution 16\" (406.4mm): " + str(HBTWN_CNM.calculate_telescope_resolution([16,'inch'])))
-print("Telescope resolution 20\" (500.9mm): " + str(HBTWN_CNM.calculate_telescope_resolution([20,'inch'])))
-print("Telescope resolution 24\" (609.6mm): " + str(HBTWN_CNM.calculate_telescope_resolution([24,'inch'])))
-
+print("Telescope resolution for wavelenght 522 [nm] and possible visible object size on Moon from distance 364397.0 [km]:")
+print("Telescope 5\" (127mm): " + str(HBTWN_CNM.calculate_telescope_resolution([5,'inch'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([5,'inch']))))
+print("Telescope 8\" (203.2mm): " + str(HBTWN_CNM.calculate_telescope_resolution([8,'inch'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([8,'inch']))))
+print("Telescope 10\" (254mm): " + str(HBTWN_CNM.calculate_telescope_resolution([10,'inch'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([10,'inch']))))
+print("Telescope 16\" (406.4mm): " + str(HBTWN_CNM.calculate_telescope_resolution([16,'inch'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([16,'inch']))))
+print("Telescope 20\" (500.9mm): " + str(HBTWN_CNM.calculate_telescope_resolution([20,'inch'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([20,'inch']))))
+print("Telescope 24\" (609.6mm): " + str(HBTWN_CNM.calculate_telescope_resolution([24,'inch'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([24,'inch']))))
+print("Telescope 1m: " + str(HBTWN_CNM.calculate_telescope_resolution([1,'m'])) + " Object size: " + str(HBTWN_CNM.calculate_object_size([364397.0, 'km'],'m',HBTWN_CNM.calculate_telescope_resolution([1,'m']))))
 
 
 
